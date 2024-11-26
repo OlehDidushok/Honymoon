@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct FooterView: View {
+    // MARK: PROPERTIES
+    @Binding var showBookingAlert: Bool
+    
     var body: some View {
         HStack {
             Image(systemName: "xmark.circle")
@@ -16,7 +19,7 @@ struct FooterView: View {
             Spacer()
             
             Button {
-                
+                showBookingAlert.toggle()
             } label: {
                 Text("Book Destination.".uppercased())
                     .font(.system(.subheadline, design: .rounded))
@@ -39,5 +42,5 @@ struct FooterView: View {
 }
 
 #Preview {
-    FooterView()
+    FooterView(showBookingAlert: .constant(false))
 }
