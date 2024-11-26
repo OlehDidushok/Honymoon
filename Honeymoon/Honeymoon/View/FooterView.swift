@@ -32,6 +32,7 @@ struct FooterView: View {
             Spacer()
             
             Image(systemName: "heart.circle")
+                .font(.system(size: 42, weight: .light))
         }
         .padding()
     }
