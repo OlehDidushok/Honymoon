@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct InfoView: View {
+    // MARK: PROPERTIES
+    @Environment(\.presentationMode) var presentationMode
+    
     var body: some View {
         ScrollView(.vertical, showsIndicators: false) {
             VStack(alignment: .center, spacing: 20) {
@@ -29,7 +32,7 @@ struct InfoView: View {
                 Spacer(minLength: 10)
                 
                 Button {
-                    
+                    presentationMode.wrappedValue.dismiss()
                 } label: {
                     Text("Continue".uppercased())
                         .modifier(ButtonModifier())

@@ -11,10 +11,11 @@ struct ContentView: View {
     // MARK: PROPERTIES
     @State var showAlert: Bool = false
     @State var showGuide: Bool = false
+    @State var showInfo: Bool = false
     
     var body: some View {
         VStack {
-            HeaderView(showGuide: $showGuide)
+            HeaderView(showGuide: $showGuide, showInfoView: $showInfo)
             Spacer()
             CardView(honeymoon: honeymoonData[1])
                 .padding()
